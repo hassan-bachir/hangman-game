@@ -44,9 +44,10 @@ body {
     transform: scale(0.98);
 }
 #keyboard {
+    padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
-    width :80vh;
+    width :93vh;
     align-items: center;
     justify-content: space-between;
     row-gap: 10px;
