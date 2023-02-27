@@ -8,7 +8,7 @@
 - 👨‍💻 Author: Hassan Bachir
 - 📫 How to reach me **hassan.bachir001@gmail.com**
 - 🌱 Date: 27-february-2023
-- 📝 References that I used in this project/CSS:
+- 📝 References that I used in this project:
 - <ul><li><a href="https://www.youtube.com/watch?v=dgvyE1sJS3Y">Vanilla JavaScript Hangman Game Tutorial - No Frameworks</a>
   </li>
   
