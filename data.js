@@ -1,19 +1,12 @@
-var programming_languages = [
-	"python",
-	"javascript",
-	"mongodb",
-	"json",
-	"java",
-	"html",
-	"css",
-	"c",
-	"csharp",
-	"golang",
-	"kotlin",
-	"php",
-	"sql",
-	"ruby"
-]
+
+
+
+const dictionary1 = {
+  langs: ["python","javascript","mongodb","json","java","html","css","c","csharp","golang","kotlin","php","sql","ruby"],
+  fruits : ["apple", "banana", "orange", "kiwi", "mango"],
+  cities : ["New York", "London", "Paris", "Tokyo", "Sydney", "Dubai", "Rome"]
+
+}
 
 let answer = '';
 let maxWrong = 6;
@@ -21,10 +14,26 @@ let mistakes = 0;
 let guessed = [];
 let wordStatus = null;
 
-
 function randomWord() {
-    answer = programming_languages[Math.floor(Math.random() * programming_languages.length)];
+  const keys = Object.keys(dictionary1); 
+  const randomKey = keys[Math.floor(Math.random() * keys.length)]; 
+  const randomWord = dictionary1[randomKey][Math.floor(Math.random() * dictionary1[randomKey].length)]; 
+   cat1 = randomKey;
+  answer = randomWord;
+}
+function changeText() {
+
+  const textAbove = document.getElementById('textAbove')
+  if (cat1 =='langs') {
+      textAbove.textContent = "guess a programming language"
+      
+  }else if (cat1 =='fruits'){
+      textAbove.textContent = "guess a fruit"
+  }else {
+      textAbove.textContent = "guess a city"
   }
+
+}
 
   
 function generateButtons() {
@@ -96,6 +105,7 @@ function reset() {
     document.getElementById('hangmanPic').src = './images/0.jpg';
   
     randomWord();
+    changeText();
     guessedWord();
     updateMistakes();
     generateButtons();
@@ -105,5 +115,6 @@ function reset() {
   document.getElementById('maxWrong').innerHTML = maxWrong;
 
   randomWord();
+  changeText();
   generateButtons();
   guessedWord();
